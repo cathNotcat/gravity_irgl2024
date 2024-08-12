@@ -10,6 +10,7 @@ public class ObstacleNormal : MonoBehaviour
     [SerializeField] GameObject box3;
     [SerializeField] GameObject trap1;
     [SerializeField] GameObject trap2;
+    [SerializeField] GameManager gameManager;
     float box2Chance = 0.9f;
     float box3Chance = 0.8f;
     float box1Chance = 0.7f;
@@ -61,7 +62,8 @@ public class ObstacleNormal : MonoBehaviour
             {
                 PlayerPrefs.SetInt("MostCoins", NormalCoin.addCoin);
             }
-            SceneManager.LoadScene(2);
+            gameManager.TriggerGameWin();
+            SceneManager.LoadScene(3);
             activate = true;
         }
     }

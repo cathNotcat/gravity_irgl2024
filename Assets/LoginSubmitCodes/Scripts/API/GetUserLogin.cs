@@ -148,8 +148,8 @@ public class GetUserLogin : MonoBehaviour
     {
         loginSceneUIManager.LoginFormButton.interactable = false;
         loginSceneUIManager.PlayLoadingAnimation(true);
-        string username = getParam(OpenLinks.GetWindowLocation()); // TODO: Nyalakan ini untuk WebGL buildnya
-        // string username = getParam("www.petra.ac.id/irgl24?abc"); // TODO: Ini hanya untuk testing di unity editor
+        // string username = getParam(OpenLinks.GetWindowLocation()); // TODO: Nyalakan ini untuk WebGL buildnya
+        string username = getParam("www.petra.ac.id/irgl24?abc"); // TODO: Ini hanya untuk testing di unity editor
         StartCoroutine(GetInfoOfUsername(username, 0, 3));
     }
 

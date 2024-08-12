@@ -13,7 +13,7 @@ public class StartGame : MonoBehaviour
     }
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
         Debug.Log("New Scene");
     }
     public void Rules()

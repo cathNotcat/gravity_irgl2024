@@ -20,6 +20,6 @@ public class NormalMostCoin : MonoBehaviour
             PlayerPrefs.SetInt("MostCoins", NormalCoin.addCoin);
         }
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }

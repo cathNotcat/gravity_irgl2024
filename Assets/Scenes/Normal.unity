@@ -1084,6 +1084,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22685366cdd0cd64ba821c9101d67d5b, type: 3}
+--- !u!114 &579897957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1402832997287279166, guid: 22685366cdd0cd64ba821c9101d67d5b, type: 3}
+  m_PrefabInstance: {fileID: 579897956}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512b0c40295dffd468227b1901eb39ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612150185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,6 +1680,7 @@ MonoBehaviour:
   box3: {fileID: 3557692318232613724, guid: 88bfd030e6e0e6840b4518c359f30b9c, type: 3}
   trap1: {fileID: 8459999145038754467, guid: 3cfd2563d2746f04baa370808afe8cd3, type: 3}
   trap2: {fileID: 5420417868538628399, guid: fa40b5dde30d0524aad96a4e4b20dabe, type: 3}
+  gameManager: {fileID: 1308340465}
 --- !u!4 &1209221367
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,6 +1728,7 @@ MonoBehaviour:
   gameOver: {fileID: 1119323932}
   pause: {fileID: 1737885661}
   inGame: {fileID: 2098530146}
+  resultUIManagerScript: {fileID: 579897957}
 --- !u!4 &1308340466
 Transform:
   m_ObjectHideFlags: 0

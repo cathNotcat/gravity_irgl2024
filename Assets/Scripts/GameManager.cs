@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject pause;
     public GameObject inGame;
 
+    // private int score = NormalCoin.addCoin;
+
+    [SerializeField] ResultUIManager resultUIManagerScript;
     void Start()
     {
         gameOver.SetActive(false);
@@ -19,7 +22,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOver.SetActive(true);
-        Time.timeScale = 0;
+        TriggerGameLose();
+        // Time.timeScale = 0;
     }
     public void Replay()
     {
@@ -41,15 +45,35 @@ public class GameManager : MonoBehaviour
     }
     public void BackToStart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void StartButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void Exit()
     {
         Application.Quit();
         PlayerPrefs.DeleteAll();
+    }
+
+    public void TriggerGameLose()
+    {
+        int score = NormalCoin.addCoin;
+        resultUIManagerScript.IsGameWin = false;
+        resultUIManagerScript.GameScore = score;
+        resultUIManagerScript.ShowSubmittingUI();
+        // Time.timeScale = 0;
+        Debug.Log("lose: " + score.ToString());
+    }
+
+    public void TriggerGameWin()
+    {
+        int score = NormalCoin.addCoin;
+        resultUIManagerScript.IsGameWin = true;
+        resultUIManagerScript.GameScore = score;
+        resultUIManagerScript.ShowSubmittingUI();
+        // Time.timeScale = 0;
+        Debug.Log("win: " + score.ToString());
     }
 }

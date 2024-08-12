@@ -26,7 +26,7 @@ public class NormalCoin : MonoBehaviour
         {
             PlayerPrefs.SetInt("MostCoins", addCoin);
         }
-        
+
         SceneManager.LoadScene(1);
     }
 }
